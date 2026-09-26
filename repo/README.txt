@@ -6,6 +6,12 @@
 Cydia -> Sources -> Edit -> Add -> `https://GDmad10.github.io/AI-slop-prototyping/repo/`
 (Zebra/Sileo: same, add source with that URL). Search "Ghost IPA".
 
+## TIMEOUT on old Cydia? (iOS 7-8 + HTTPS)
+Old APT's TLS cannot handshake with modern hosts. This is expected, not
+broken. Use the LAN method below (plain HTTP, no TLS) - it always works
+on the same Wi-Fi. Safari test: if Safari on the iPad also fails to open
+the Packages URL, it's the TLS stack - LAN method it is.
+
 ## Going live (GitHub Pages)
 1. Push master to GitHub.
 2. Repo Settings -> Pages -> Deploy from branch -> master, folder / (root).
