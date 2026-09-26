@@ -44,7 +44,7 @@ ctl_lines = [l for l in ctl.strip().splitlines()
              if not l.startswith("Depiction:")]  # repo serves its own depiction path
 pkg = ("\n".join(ctl_lines) + f"\nFilename: debs/{name}\nSize: {len(blob)}\n"
        f"MD5sum: {md5}\nSHA256: {sha256}\n"
-       "Depiction: depiction/com.ghostipa.tweak/index.html\n")
+        "Depiction: http://ghostly.repo/depiction/com.ghostipa.tweak/index.html\n")
 open(os.path.join(REPO, "Packages"), "w", newline="\n").write(pkg)
 with open(os.path.join(REPO, "Packages.bz2"), "wb") as f:
     f.write(bz2.compress(pkg.encode(), 9))
