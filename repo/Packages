@@ -10,7 +10,7 @@ Priority: optional
 Homepage: https://github.com/ghostipa/ghostipa-tweak
 Depends: mobilesubstrate, preferenceloader, firmware (>= 7.0)
 Filename: debs/com.ghostipa.tweak_1.0.0_iphoneos-arm.deb
-Size: 10924
-MD5sum: 30b693a22c13d9630b9a95e90a57844c
-SHA256: 0e9369ebb0c948b703ecb651fdc1efd3702e25aca6c3cbd41e00f2501898b66f
-Depiction: http://ghostly.repo/depiction/com.ghostipa.tweak/index.html
+Size: 10946
+MD5sum: 76041321944954cb14ad7e3fcb8fa094
+SHA256: 89692acefdbd3ba1e0b1be15568eb741a78d5f720ee0c6d4bc20b73d1d2055c0
+Depiction: https://GDmad10.github.io/AI-slop-prototyping/repo/depiction/com.ghostipa.tweak/index.html

@@ -7,6 +7,6 @@ Maintainer: Ghost IPA Preservation Research
 Author: ratman4080
 Section: Tweaks
 Priority: optional
-Homepage: http://ghostly.repo
-Depiction: http://ghostly.repo/depiction/com.ghostipa.tweak/
+Homepage: https://GDmad10.github.io/AI-slop-prototyping/repo/
+Depiction: https://GDmad10.github.io/AI-slop-prototyping/repo/depiction/com.ghostipa.tweak/
 Depends: mobilesubstrate, preferenceloader, firmware (>= 7.0)

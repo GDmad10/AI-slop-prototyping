@@ -37,7 +37,7 @@ Author: ratman4080
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/ghostipa/ghostipa-tweak
-Depiction: http://ghostly.repo/depiction/com.ghostipa.tweak/
+Depiction: https://GDmad10.github.io/AI-slop-prototyping/repo/depiction/com.ghostipa.tweak/
 Depends: mobilesubstrate, preferenceloader, firmware (>= 7.0)
 """
 
