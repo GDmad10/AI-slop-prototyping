@@ -92,6 +92,19 @@ def add_file(tar, arcname, data, mode=0o644):
     tar.addfile(ti, io.BytesIO(data))
 
 
+def add_dir(tar, arcname, mode=0o755):
+    # dpkg will NOT create parent dirs implied by file entries on old
+    # systems — every directory in the payload must exist explicitly,
+    # or install fails with "No such file or directory" (.dpkg-new).
+    if not arcname.endswith("/"):
+        arcname += "/"
+    ti = tarfile.TarInfo(arcname)
+    ti.type = tarfile.DIRTYPE
+    ti.mode = mode
+    ti.mtime = 1758735900
+    tar.addfile(ti)
+
+
 # ---- control.tar.gz ----
 cbuf = io.BytesIO()
 with tarfile.open(fileobj=cbuf, mode="w:gz") as t:
@@ -108,6 +121,19 @@ control_gz = cbuf.getvalue()
 # which supersedes this one. The substrate filter alone is inert and harmless.
 dbuf = io.BytesIO()
 with tarfile.open(fileobj=dbuf, mode="w:gz") as t:
+    for _d in ("Library/",
+               "Library/MobileSubstrate/",
+               "Library/MobileSubstrate/DynamicLibraries/",
+               "Library/MobileSubstrate/DynamicLibraries/GhostIPA.bundle/",
+               "var/",
+               "var/mobile/",
+               "var/mobile/Library/",
+               "var/mobile/Library/GhostIPA/",
+               "usr/",
+               "usr/share/",
+               "usr/share/doc/",
+               "usr/share/doc/ghostipa/"):
+        add_dir(t, _d)
     add_file(t, "Library/MobileSubstrate/DynamicLibraries/GhostIPA.plist",
              read_tweak("GhostIPA.plist"))
     add_file(t, "Library/MobileSubstrate/DynamicLibraries/GhostIPA.bundle/ASSET-README.txt",
