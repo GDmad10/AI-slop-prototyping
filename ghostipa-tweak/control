@@ -1,0 +1,12 @@
+Package: com.ghostipa.tweak
+Name: Ghost IPA
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Reveal genuine delisted/hidden App Store records inside the native App Store. Discovery only - Apple stays responsible for auth, downloads, installs.
+Maintainer: Ghost IPA Preservation Research
+Author: ratman4080
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/ghostipa/ghostipa-tweak
+Depiction: https://your-repo/depic/com.ghostipa.tweak/
+Depends: mobilesubstrate, preferenceloader, firmware (>= 7.0)

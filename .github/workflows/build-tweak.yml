@@ -1,0 +1,33 @@
+name: Build GhostIPA tweak (.deb)
+
+on:
+  push:
+    paths: ['ghostipa-tweak/**']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+        with: { submodules: recursive }
+      - name: Install Theos
+        run: |
+          git clone --recursive https://github.com/theos/theos.git ~/theos
+          echo "THEOS=$HOME/theos" >> $GITHUB_ENV
+          brew install dpkg ldid || true
+      - name: Fetch iOS SDK
+        run: |
+          mkdir -p ~/theos/sdks
+          curl -L -o /tmp/sdk.zip https://github.com/theos/sdks/releases/download/current/iPhoneOS16.5.sdk.zip
+          unzip -q /tmp/sdk.zip -d ~/theos/sdks
+      - name: Verify package tree
+        run: python3 tests/verify_tweak.py
+      - name: Build package
+        working-directory: ghostipa-tweak
+        run: make package FINALPACKAGE=1
+      - name: Upload .deb
+        uses: actions/upload-artifact@v4
+        with:
+          name: com.ghostipa.tweak
+          path: ghostipa-tweak/packages/*.deb

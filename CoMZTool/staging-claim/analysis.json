@@ -1,0 +1,274 @@
+{
+  "analysis": {
+    "identification": {
+      "filename": "A3482A80.CallofMiniZombies_3stxm41ntn5hm",
+      "extension": ".callofminizombies_3stxm41ntn5hm",
+      "detected_format": "unknown/opaque",
+      "magic_hex": "5052450701000000",
+      "md5": "4e2a75a3dd13851cd222c9e4b20f0775",
+      "sha1": "814a066d6ba94bfbbf6161b784a50aab5a0e686a",
+      "sha256": "8ea2330faab5713a294d943fb6f90f1f0922d829804ffbd78616b2812d1d9d17",
+      "size": 84254746,
+      "signal_hits": [],
+      "strings_sample": [
+        "F!B/xw",
+        "q%npa",
+        "B:`<P",
+        "t':LZ",
+        "\\G<xC.",
+        "wVGb\\",
+        "<DL]4",
+        "Vz)!~",
+        "WzU.!",
+        "`X e4",
+        "`N$b%z",
+        "X,\"?v",
+        "Ind\\O",
+        "Z_?>m",
+        "r7Iip",
+        "U)H@0",
+        "'90~a",
+        "O.NfX",
+        "R~jcA",
+        "Hc{Gby",
+        "NdDJW",
+        "#5v.z",
+        "6dm_Q",
+        "cSjf:&p",
+        "bm.{z",
+        ">EVK^M",
+        "gfh\">",
+        "#{r/L",
+        "zti}W",
+        "!Ps|8Y",
+        "#J>(Y",
+        "z4EN]",
+        "'V1,q5",
+        "LdLF_",
+        "C?yk(",
+        "W7[Y::",
+        "s|0D^5x",
+        "9sr\\6",
+        "0fQV6z3",
+        ";chMB",
+        "mEF.!",
+        "(Wq*5;p",
+        "=GF*m",
+        ">.<@7",
+        "^=~]t",
+        ">jz%-,",
+        "ct]gV",
+        "S&%uj_",
+        ".2I5Q",
+        "99x^P{",
+        "U;c9!9",
+        "H rm#",
+        "Wzx,#H",
+        "Tz^.A",
+        "DW1VT%",
+        "_[1W}`v",
+        "bt+rA",
+        "niH!L",
+        ":o rPu",
+        "PY$d7"
+      ],
+      "zip_names_sample": [],
+      "zip_name_hits": [],
+      "zip_comment": "",
+      "scanned_bytes": 8388608,
+      "is_likely_comz": true
+    },
+    "structural_map": {
+      "file_size": 84254746,
+      "sections": [
+        {
+          "name": "Header",
+          "offset": 0,
+          "size": 512,
+          "note": "magic + version-ish fields (observed, not decoded as keys)"
+        },
+        {
+          "name": "Metadata",
+          "offset": 512,
+          "size": 3584,
+          "note": "printable strings / GUIDs / manifest hints if plaintext"
+        },
+        {
+          "name": "Body",
+          "offset": 4096,
+          "size": 84250650,
+          "note": "opaque payload; entropy profile distinguishes compressed/encrypted vs structured data, not the algorithm"
+        }
+      ],
+      "tree": "FILE\n+-- Header\n+-- Metadata\n+-- File Table (only if plaintext container; otherwise 'not visible')\n+-- Encryption Metadata (presence/absence only \u2014 not decoded)\n+-- Compressed/Encrypted Data (opaque)\n+-- Integrity Data (hashes recorded externally)\n",
+      "head_hex": "50524507010000002000000020000000fa0200001a030000009d0505f59c05053c00570052004d00480045004100440045005200200078006d006c006e0073003d00220068007400740070003a002f002f0073006300680065006d00610073002e006d006900630072006f0073006f00660074002e0063006f006d002f00440052004d002f0032003000300037002f00300033002f0050006c00610079005200650061006400790048006500610064006500720022002000760065007200730069006f006e003d00220034002e0030002e0030002e00300022003e003c0044004100540041003e003c00500052004f00540045004300540049004e0046004f00"
+    },
+    "chunk_entropies": [
+      {
+        "offset": 0,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0054
+      },
+      {
+        "offset": 262144,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0038
+      },
+      {
+        "offset": 524288,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0039
+      },
+      {
+        "offset": 786432,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0038
+      },
+      {
+        "offset": 1048576,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0039
+      },
+      {
+        "offset": 1310720,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0038
+      },
+      {
+        "offset": 1572864,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0038
+      },
+      {
+        "offset": 1835008,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0037
+      },
+      {
+        "offset": 2097152,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0039
+      },
+      {
+        "offset": 2359296,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0039
+      },
+      {
+        "offset": 2621440,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0039
+      },
+      {
+        "offset": 2883584,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0039
+      },
+      {
+        "offset": 3145728,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0039
+      },
+      {
+        "offset": 3407872,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.004
+      },
+      {
+        "offset": 3670016,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0038
+      },
+      {
+        "offset": 3932160,
+        "size": 262144,
+        "entropy": 7.999,
+        "zero_ratio": 0.0037
+      }
+    ],
+    "observables": {
+      "guids": [],
+      "interesting_strings": [],
+      "strings_count": 6900,
+      "le32_header_view": [
+        {
+          "offset": 0,
+          "u32le": 121983568,
+          "hex": "07455250"
+        },
+        {
+          "offset": 4,
+          "u32le": 1,
+          "hex": "00000001"
+        },
+        {
+          "offset": 8,
+          "u32le": 32,
+          "hex": "00000020"
+        },
+        {
+          "offset": 12,
+          "u32le": 32,
+          "hex": "00000020"
+        },
+        {
+          "offset": 16,
+          "u32le": 762,
+          "hex": "000002fa"
+        },
+        {
+          "offset": 24,
+          "u32le": 84253952,
+          "hex": "05059d00"
+        },
+        {
+          "offset": 32,
+          "u32le": 5701692,
+          "hex": "0057003c"
+        },
+        {
+          "offset": 64,
+          "u32le": 2228285,
+          "hex": "0022003d"
+        },
+        {
+          "offset": 128,
+          "u32le": 5046354,
+          "hex": "004d0052"
+        }
+      ]
+    },
+    "zip_inventory": {
+      "readable": false,
+      "error": "BadZipFile: File is not a zip file"
+    },
+    "full_entropy_head": 8.0
+  },
+  "wrapper": {
+    "size": 84254746,
+    "head_hex": "5052450701000000",
+    "tail_hex": "020c85f5a8d92f4e6cdfae76f13fc83f6d9f16191ad0",
+    "extension_hint": ".callofminizombies_3stxm41ntn5hm \u2014 extension is not authoritative",
+    "layers": [
+      {
+        "layer": "protection-status",
+        "detail": "opaque-region-presence is reported via entropy + zip readability; no algorithm attribution is made without vendor documentation"
+      }
+    ]
+  }
+}

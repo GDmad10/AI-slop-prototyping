@@ -1,0 +1,51 @@
+// MergeHooks.x — per-generation search-merge + row/PDP wiring TEMPLATE.
+// Fill the __T1__ placeholders from YOUR T1-classes.txt output (docs/HOOKS.md
+// Step 1), then add this file to GhostIPA_FILES in the Makefile and rebuild.
+// Nothing here is assumed: every %hook target comes from on-device discovery.
+// Append-only: %orig first, ghost rows after. Never reorder/remove Apple's rows.
+
+#import "GhostCore.h"
+#import "GhostDB.h"
+#import "GhostScan.h"
+#import "GhostBadge.h"
+#import "adapters/GhostAdapter.h"
+
+// Set by Tweak.x %ctor (extern). Declared here so hooks can stage results.
+extern GhostAdapter *ghostAdapter; // <-- change Tweak.x `static` to global when enabling
+
+/*
+// ---- iOS 7-9: table-driven search (example shape) ----
+%hook __T1_SEARCH_RESULTS_CLASS_IOS7_9__
+- (void)__T1_MERGE_SELECTOR__:(id)results {
+    %orig;
+    for (GhostApp *g in ghostAdapter.pendingGhosts) {
+        id row = %orig; // build via the class's own row factory if exposed; else skip
+        (void)row;
+    }
+    ghostAdapter.pendingGhosts = nil;
+}
+%end
+
+// ---- iOS 10-12 / 13-15: collection / bridge model (example shape) ----
+%hook __T1_SEARCH_RESULTS_CLASS_MODERN__
+- (void)__T1_SET_RESULTS_SELECTOR__:(id)results {
+    %orig;
+    // Append ghost view-models built from lookup payloads (same adamID/price).
+    ghostAdapter.pendingGhosts = nil;
+}
+- (void)layoutSubviews {
+    %orig;
+    // Per-cell: [GhostBadge applyRowArtwork:cell.artworkView];
+}
+%end
+
+// ---- Product page badge (all generations) ----
+%hook __T1_PDP_CLASS__
+- (void)viewDidAppear:(BOOL)animated {
+    %orig;
+    // Resolve current adamID from the page's own model, look up GhostDB:
+    //   GhostApp *g = [[GhostDB shared] ghostForAppleID:adamID];
+    //   if (g) [GhostBadge attachToProductView:self.view app:g installable:...];
+}
+%end
+*/

@@ -1,0 +1,10 @@
+# Hosting this depiction on your repo
+1. Copy `ghostipa-tweak/depiction/` to your repo as `depic/com.ghostipa.tweak/`.
+   - `index.html` (this page)
+   - `icon.png` — 120px+ PNG of the tweak logo (drop the file in next to index.html)
+2. In the repo's Packages file (or `control`), set:
+     Depiction: https://YOUR-REPO/depic/com.ghostipa.tweak/
+     Icon: https://YOUR-REPO/depic/com.ghostipa.tweak/icon.png
+   Cydia renders Depiction; Sileo/Zebra use both (Icon = list thumbnail).
+3. Sizes: icon.png ≥ 120×120 (240×240 ideal, @2x). Keep the rounded-rectangle
+   artwork full-bleed — Cydia/Sileo mask it themselves. Do NOT pre-round.

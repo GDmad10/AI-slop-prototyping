@@ -1,0 +1,1 @@
+# Ghost IPA Installer — Windows preservation-research tool. stdlib only.
